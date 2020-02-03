@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Operators in attribute selectors</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+    <style>
+        img[alt="Pollution"] {
+            border: 5px dashed red;
+        }
+        
+        img[src$=".jpg"] {
+            margin-left: 50px;
+        }
+        
+        li[data-description~="even"] {
+            background-color: grey;
+        }
+        
+        li[data-description*="even"] {
+            font-size: 24px;
+        }
+        
+        a[href^="https://"] {
+            color: green;
+        }
+        
+        span[lang|="en"] {
+            font-size: 28px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="page-header">Operators in attribute selectors</h1>
+
+    <section class="gallery">
+        <h2>Images gallery</h2>
+        <img width="100px" src="https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-lesson6-hw1/nature1.png" alt="Beautiful forest">
+        <img width="100px" src="https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-lesson6-hw1/nature2.png" alt="One more forest">
+        <img width="100px" src="https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-lesson6-hw1/nature3.png" alt="Huge forest in mountains">
+        <img width="100px" src="https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-lesson6-hw1/nature4.png" alt="City forest">
+        <img width="100px" src="https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-lesson6-hw1/pollution.jpg" alt="Pollution">
+    </section>
+    <article>
+        <h2 class="page-header">Операторы в селекторах атрибутов:</h2>
+        <ul>
+            <li data-description="rule odd"><b>=</b> проверяет значение атрибута на строгое равенство</li>
+            <li data-description="rule even"><b>^=</b> проверяет наличие строки в начале значения атрибута</li>
+            <li data-description="rule odd"><b>$=</b> проверяет наличие строки в конце значения атрибута</li>
+            <li data-description="rule even-not-even"><b>*=</b> проверяет вхождение строки в значение атрибута</li>
+            <li data-description="odd rule"><b>~=</b> проверяет вхождение строки как целое слово, разделенное пробелом
+            </li>
+            <li data-description="even rule"><b>|=</b> значения атрибута должно начинаться с указанной строки, может отделяться дефисом от остальной части
+            </li>
+        </ul>
+    </article>
+
+    <article>
+        <h2 class="page-header">Веб браузеры</h2>
+        <p>В мире существует несколько компаний, которые разрабатывают свои web browsers. Наиболее известные это
+            <a href="https://www.google.com">Google</a>,
+            <a href="https://www.mozilla.org">
+                <span lang="en-gb">Mozilla</span></a>, <a href="https://www.opera.com">Opera</a>,
+            <a href="broken link https://microsoft.com"><span lang="en-gb">Microsoft</span></a>,
+            <a href="https://www.apple.com">Apple</a>. Разработчики стараются придерживаться единых стандартов в своих продуктах. Все же отличия есть, их нужно <span lang="ru">учитывать</span> при разработке веб сайтов. При этом существует множество инструментов,
+            которые упрощают <span lang="en">Front-End</span> разработчику жизнь;)
+        </p>
+    </article>
+
+</body>
+
+</html>
