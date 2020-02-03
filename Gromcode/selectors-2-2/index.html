@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hierarchy selectors</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+    <style>
+        li {
+            margin-bottom: 16px;
+        }
+        
+        ol>li>span {
+            background-color: green;
+            color: white;
+        }
+        
+        ul>li>span {
+            background-color: orange;
+            color: white;
+        }
+        
+        #special+li>span {
+            border: 3px solid red;
+        }
+        
+        #special~li {
+            margin-left: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hierarchy selectors</h1>
+
+    <ol>
+        <li><span>> - direct children</span></li>
+        <li><span>space - all nested children</span></li>
+        <li><span>~ - all brothers after</span></li>
+        <li><span>+ - next brother</span></li>
+    </ol>
+
+    <ul>
+        <li><span>Europe</span></li>
+        <li><span>Asia</span></li>
+        <li id="special"><span>Africa</span></li>
+        <li><span>Antarctida</span></li>
+        <li><span>South America</span></li>
+        <li><span>North America</span></li>
+    </ul>
+</body>
+
+</html>
