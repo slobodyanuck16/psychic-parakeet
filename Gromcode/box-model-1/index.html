@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha256-WAgYcAck1C1/zEl5sBl5cfyhxtLgKGdpI3oKyJffVRI=" crossorigin="anonymous" />
+    <style>
+        body {
+            background-color: antiquewhite;
+        }
+        
+        .border-content {
+            border: 8px solid black;
+            width: 512px;
+            height: 128px;
+            margin: 16px;
+            padding: 16px;
+        }
+        
+        .content-box1 {
+            box-sizing: content-box;
+            background-color: aquamarine;
+        }
+        
+        .border-box1 {
+            box-sizing: border-box;
+            background-color: azure;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content-box1 border-content">Content Box Sizing</div>
+    <div class="border-box1 border-content">Border Box Sizing</div>
+</body>
+
+</html>
