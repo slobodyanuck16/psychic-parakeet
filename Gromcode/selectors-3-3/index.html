@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Псевдоэлементы</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+    <style>
+        .theory::first-letter {
+            font-size: 34px;
+            margin-left: 16px;
+            color: orange;
+        }
+        
+        .theory::first-line {
+            font-size: 24px;
+        }
+        
+        .theory::selection {
+            background-color: red;
+            color: white;
+        }
+        
+        a::before {
+            content: '<'
+        }
+        
+        a::after {
+            content: '>'
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Псевдоэлементы</h1>
+
+    <p class="theory">Псевдоэлементы предоставляют способ сослаться на содержимое, которое не существует в исходном документе.</p>
+
+    <p>Самым посещаемым сайтом на сегодняшний день является <a href="https://www.google.com">google.com</a>. После него вторым идет <a href="https://www.youtube.com">youtube.com</a></p>
+</body>
+
+</html>
