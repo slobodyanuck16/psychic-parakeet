@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Иерархические селекторы</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+    <style>
+        .already-learned ol {
+            background-color: green;
+            color: white;
+        }
+        
+        .to-be-learned ol {
+            background-color: orange;
+            color: green;
+        }
+        
+        .already-learned code {
+            background-color: orange;
+        }
+        
+        .to-be-learned code {
+            background-color: green;
+        }
+        
+        h4 code {
+            border: 2px solid blue;
+        }
+        
+        #special2~li {
+            font-size: 24px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1 class="page-header">Иерархические селекторы</h1>
+
+    <section class="already-learned">
+        <h2>В этом курсе мы уже изучили</h2>
+        <ol>
+            <li>
+                <h3>HTML</h3>
+                <ul>
+                    <li id="special1">
+                        <h4>Семантические теги</h4>
+                    </li>
+                    <li>
+                        <h4>Одинарные и парные теги (<code>&lt;img&gt;</code>, <code>&lt;div&gt;...&lt;/div&gt;</code> ...) </h4>
+                    </li>
+                    <li>
+                        <h4>Атрибуты</h4>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h3>CSS</h3>
+                <ul>
+                    <li>
+                        <h4>Несколько способов назначать стили элементам</h4>
+                    </li>
+                    <li>
+                        <h4>Селекторы (<code>#id</code>, <code>.className</code> ...)</h4>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </section>
+    <section class="to-be-learned">
+        <h2>А об этом еще предстоит узнать:</h2>
+        <ol>
+            <li>
+                <h3>HTML</h3>
+                <ul>
+                    <li>
+                        <h4>Работа с формами (<code>&lt;input&gt;</code>, <code>&lt;form&gt;</code> ...)</h4>
+                    </li>
+                    <li>
+                        <h4>Работа с таблицами</h4>
+                    </li>
+                    <li>
+                        <h4>Медиа контент (<code>&lt;video&gt;</code>, <code>&lt;audio&gt;</code> ...)</h4>
+                    </li>
+                    <li>...</li>
+                </ul>
+            </li>
+            <li>
+                <h3>CSS</h3>
+                <ul>
+                    <li>Layout</li>
+                    <li>Работа с фоном и цветами</li>
+                    <li>Box model (<code>padding</code>, <code>margin</code> ...)</li>
+                    <li id="special2">Стилизация текста</li>
+                    <li>Flexbox</li>
+                    <li>Резиновая верстка</li>
+                    <li>Адаптивная верстка верстка</li>
+                    <li>И многое другое</li>
+                </ul>
+            </li>
+        </ol>
+
+    </section>
+
+</body>
+
+</html>
